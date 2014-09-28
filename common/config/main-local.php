@@ -1,12 +1,22 @@
 <?php
+
 return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
+            'dsn' => 'mysql:host=localhost;dbname=yii2_test',
             'username' => 'root',
-            'password' => '',
+            'password' => 'mysqlr00t',
             'charset' => 'utf8',
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+                'login' => 'site/login',
+                'logout' => 'site/logout',
+                'signup' => 'site/signup',
+            ],
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
